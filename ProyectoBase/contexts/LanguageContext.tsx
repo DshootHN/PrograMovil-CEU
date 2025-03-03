@@ -10,7 +10,7 @@ const translations = {
 }
 
 const i18n = new I18n(translations);
-i18n.defaultLocale = "fr";
+i18n.defaultLocale = "es";
 i18n.enableFallback = true;
 
 type Language = "en" | "es" | "fr" | "de";
@@ -29,7 +29,7 @@ export const useLanguage = () => {
 }
 
 export const LanguageProvider=({ children }: { children: React.ReactNode }) => {
-    const [language, setLanguage] = useState<Language>("de");
+    const [language, setLanguage] = useState<Language>("es");
     useEffect(() => {
 
         const loadLanguage = async () => {

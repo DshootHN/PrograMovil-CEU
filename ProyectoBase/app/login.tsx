@@ -17,8 +17,8 @@ export default function LoginScreen() {
   return (
     <View style={[themeStyles.container, styles.container]}>
       <Image
-        source={require("../assets/images/profilepic.jpg")}
-        style={styles.avatar}
+        source={require("../assets/images/iniciosesion.png")}
+        style={styles.avatarlogin}
       />
       <Text style={themeStyles.title}>{i18n.t("welcome")}</Text>
 
@@ -34,14 +34,6 @@ export default function LoginScreen() {
 
       <TouchableOpacity style={styles.button} onPress={() => { login(email); router.replace("/home"); }}>
         <Text style={styles.buttonText}>Ingresar</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.googleButton} onPress={() => { }}>
-        <Image
-          source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" }}
-          style={styles.googleIcon}
-        />
-        <Text style={styles.buttonText}>Ingresar con Google</Text>
       </TouchableOpacity>
     </View>
   );
@@ -60,6 +52,13 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     borderWidth: 2,
     borderColor: "#4C6EF5",
+  },
+  avatarlogin: {
+    height: 120,
+    width: 120,
+    borderRadius: 60,
+    borderWidth: 2,
+    borderColor: "#F5F7FA",
   },
     title: {
     fontSize: 28,

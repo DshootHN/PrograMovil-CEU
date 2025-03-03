@@ -8,12 +8,6 @@ export default function ProfileScreen() {
     const { logout } = useAuth();
     return (
 
-// codigo para limpiar estado en cambio de tabs
-    // useFocusEffect(
-    //     useCallback(() => {
-    //         return () => setNombre('');
-    //     }, [])
-    // );
         <ScrollView contentContainerStyle={styles.scrollContainer}>
 
             <View style={styles.container}>
