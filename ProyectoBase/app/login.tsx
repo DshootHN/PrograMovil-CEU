@@ -32,7 +32,7 @@ export default function LoginScreen() {
         autoCapitalize="none"
       />
 
-      <TouchableOpacity style={styles.button} onPress={() => { login(email); router.replace("/home"); }}>
+      <TouchableOpacity style={styles.button} onPress={() => { login(email); router.replace("/(protected)/home"); }}>
         <Text style={styles.buttonText}>Ingresar</Text>
       </TouchableOpacity>
     </View>

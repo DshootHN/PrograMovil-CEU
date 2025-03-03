@@ -3,10 +3,10 @@ import { I18n } from "i18n-js"
 import { createContext, useContext, useEffect, useState } from "react";
 
 const translations = {
-    en: { welcome: "Welcome", changeLang: "Change language", changeTheme: "Change theme", idiom: "Idiom", theme: "Theme"},
-    es: { welcome: "Bienvenido", login: "Ingresar",  changeLang: "Cambiar Tema", changeTheme: "Cambiar tema", idiom: "Idioma", theme: "Tema"},
-    fr: { welcome: "Bienvenue", changeLang: "Changer de langue", changeTheme: "Changer de sujet", idiom: "Langue", theme: "Thème"},
-    de: { welcome: "Wilkommen",  changeLang: "Sprache ändern", changeTheme: "Thema ändern", idiom: "Sprache", theme: "Thema"},
+    en: { welcome: "Welcome", changeLang: "Change language", changeTheme: "Change theme", idiom: "Idiom", theme: "Theme", profile: "Profile", createUser: "Create User", manageUsers: "Manage Users", preferences: "Preferences", logout: "Log Out"},
+    es: { welcome: "Bienvenido", login: "Ingresar",  changeLang: "Cambiar Tema", changeTheme: "Cambiar tema", idiom: "Idioma", theme: "Tema", profile: "Perfil", createUser: "Crear Usuario", manageUsers: "Administrar Usuarios", preferences: "Preferencias", logout: "Cerrar Sesión"},
+    fr: { welcome: "Bienvenue", changeLang: "Changer de langue", changeTheme: "Changer de sujet", idiom: "Langue", theme: "Thème", profile: "Profil", createUser: "Créer un utilisateur", manageUsers: "Gérer les utilisateurs", preferences: "Préférences", logout: "Se déconnecter"},
+    de: { welcome: "Wilkommen",  changeLang: "Sprache ändern", changeTheme: "Thema ändern", idiom: "Sprache", theme: "Thema", profile: "Profil", createUser: "Benutzer erstellen", manageUsers: "Benutzer verwalten", preferences: "Einstellungen", logout: "Abmelden"},
 }
 
 const i18n = new I18n(translations);

@@ -70,7 +70,15 @@ export default function AddUser() {
               placeholder="Password"
               value={password}
               keyboardType="visible-password"
+              secureTextEntry={true}
               onChangeText={setPassword}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Fecha Nacimiento"
+              value={fecha}
+              keyboardType="numeric"
+              onChangeText={setFecha}
             />
           <TouchableOpacity style={styles.button} onPress={handleAddUser}>
             <Text style={styles.buttonText}>Agregar</Text>

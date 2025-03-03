@@ -1,6 +1,7 @@
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "expo-router";
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from "react-native";
+import { i18n, useLanguage } from "@/contexts/LanguageContext";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 
@@ -28,24 +29,48 @@ export default function HomeScreen() {
       <Animated.View style={[styles.animatedView, { transform: [{ scale }] }]}>
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => router.push("/tabs/profile")}
+          onPress={() => router.push("/profile")}
           onPressIn={handlePressIn}
           onPressOut={handlePressOut}
         >
           <Ionicons name="person-outline" size={28} color="white" />
-          <Text style={styles.buttonText}>Perfil</Text>
+          <Text style={styles.buttonText}>{i18n.t("profile")}</Text>
         </TouchableOpacity>
       </Animated.View>
 
       <Animated.View style={[styles.animatedView, { transform: [{ scale }] }]}>
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => router.push("/inventario")}
+          onPress={() => router.push("/addUser")}
+          onPressIn={handlePressIn}
+          onPressOut={handlePressOut}
+        >
+          <Ionicons name="person-add" size={28} color="white" />
+          <Text style={styles.buttonText}>{i18n.t("createUser")}</Text>
+        </TouchableOpacity>
+      </Animated.View>
+
+      <Animated.View style={[styles.animatedView, { transform: [{ scale }] }]}>
+        <TouchableOpacity 
+          style={styles.buttonSetting} 
+          onPress={() => router.push("/listUser")}
+          onPressIn={handlePressIn}
+          onPressOut={handlePressOut}
+        >
+          <Ionicons name="people" size={28} color="white" />
+          <Text style={styles.buttonText}>{i18n.t("manageUsers")}</Text>
+        </TouchableOpacity>
+      </Animated.View>
+
+      <Animated.View style={[styles.animatedView, { transform: [{ scale }] }]}>
+        <TouchableOpacity 
+          style={styles.buttonSetting} 
+          onPress={() => router.push("/settings")}
           onPressIn={handlePressOut}
           onPressOut={handlePressOut}
         >
           <Ionicons name="cube-outline" size={28} color="white" />
-          <Text style={styles.buttonText}>Inventario</Text>
+          <Text style={styles.buttonText}>{i18n.t("preferences")}</Text>
         </TouchableOpacity>
       </Animated.View>
 
@@ -57,7 +82,7 @@ export default function HomeScreen() {
           onPressOut={handlePressOut}
         >
           <Ionicons name="log-out-outline" size={28} color="white" />
-          <Text style={styles.buttonText}>Cerrar Sesión</Text>
+          <Text style={styles.buttonText}>{i18n.t("logout")}</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
@@ -95,6 +120,19 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: "row",
     backgroundColor: "#4A90E2",
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  buttonSetting: {
+    flexDirection: "row",
+    backgroundColor: "#FFC300",
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderRadius: 12,
